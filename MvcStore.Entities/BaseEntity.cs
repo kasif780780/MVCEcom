@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MvcStore.Entities
 {
-    public class Class1
+    public class BaseEntity
     {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }
