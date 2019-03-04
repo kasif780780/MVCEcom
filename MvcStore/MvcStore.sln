@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcStore.Web", "MvcStore.Web\MvcStore.Web.csproj", "{F227E0D8-3AA2-435A-9CF9-65C89A0BAF7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcStore.Entities", "..\MvcStore.Entities\MvcStore.Entities.csproj", "{301F8E10-F424-44FB-9492-A5D08B9B0B4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F227E0D8-3AA2-435A-9CF9-65C89A0BAF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F227E0D8-3AA2-435A-9CF9-65C89A0BAF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F227E0D8-3AA2-435A-9CF9-65C89A0BAF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{301F8E10-F424-44FB-9492-A5D08B9B0B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{301F8E10-F424-44FB-9492-A5D08B9B0B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{301F8E10-F424-44FB-9492-A5D08B9B0B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{301F8E10-F424-44FB-9492-A5D08B9B0B4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
