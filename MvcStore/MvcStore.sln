@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcStore.Web", "MvcStore.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcStore.Entities", "..\MvcStore.Entities\MvcStore.Entities.csproj", "{301F8E10-F424-44FB-9492-A5D08B9B0B4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcStore.Database", "MvcStore.Database\MvcStore.Database.csproj", "{91514325-8FEE-4A9C-9721-F9D29A0D9A8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{301F8E10-F424-44FB-9492-A5D08B9B0B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{301F8E10-F424-44FB-9492-A5D08B9B0B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{301F8E10-F424-44FB-9492-A5D08B9B0B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91514325-8FEE-4A9C-9721-F9D29A0D9A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91514325-8FEE-4A9C-9721-F9D29A0D9A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91514325-8FEE-4A9C-9721-F9D29A0D9A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91514325-8FEE-4A9C-9721-F9D29A0D9A8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
