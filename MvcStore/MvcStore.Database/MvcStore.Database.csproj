@@ -48,11 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CBContext.cs" />
+    <Compile Include="Migrations\201903041525254_initial.cs" />
+    <Compile Include="Migrations\201903041525254_initial.Designer.cs">
+      <DependentUpon>201903041525254_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MvcStore.Entities\MvcStore.Entities.csproj">
+      <Project>{301f8e10-f424-44fb-9492-a5d08b9b0b4a}</Project>
+      <Name>MvcStore.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903041525254_initial.resx">
+      <DependentUpon>201903041525254_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
