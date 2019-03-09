@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MvcStore.Database;
 using MvcStore.Entities;
+using MvcStore.Web.ViewModels;
 
 namespace MvcStore.Web.Controllers
 {
@@ -39,6 +40,8 @@ namespace MvcStore.Web.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
+            ViewData["Category"] = new SelectList(db.Categories, "ID", "Name");
+           
             return View();
         }
 

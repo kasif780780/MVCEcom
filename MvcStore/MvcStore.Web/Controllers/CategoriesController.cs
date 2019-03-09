@@ -21,6 +21,11 @@ namespace MvcStore.Web.Controllers
             return View(db.Categories.ToList());
         }
 
+        public List<Category> GetCategories()
+        {
+            return db.Categories.ToList();
+        }
+
         // GET: Categories/Details/5
         public ActionResult Details(int? id)
         {
