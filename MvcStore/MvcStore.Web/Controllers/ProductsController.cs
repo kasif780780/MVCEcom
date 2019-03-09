@@ -40,6 +40,7 @@ namespace MvcStore.Web.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
+            //Adding Category to Product Table
             ViewData["Category"] = new SelectList(db.Categories, "ID", "Name");
            
             return View();
