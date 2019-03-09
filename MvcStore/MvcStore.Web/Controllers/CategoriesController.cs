@@ -47,7 +47,7 @@ namespace MvcStore.Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Description")] Category category)
+        public ActionResult Create([Bind(Include = "ID,Name,Description,ImageURL")] Category category)
         {
             if (ModelState.IsValid)
             {

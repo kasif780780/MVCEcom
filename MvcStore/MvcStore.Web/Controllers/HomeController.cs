@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MvcStore.Database;
+using MvcStore.Web.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,12 @@ namespace MvcStore.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private CBContext db = new CBContext();
         public ActionResult Index()
         {
-            return View();
+            HomeViewModels model = new HomeViewModels();
+             model.Categories = db.Categories.ToList();
+            return View(model);
         }
 
         public ActionResult About()

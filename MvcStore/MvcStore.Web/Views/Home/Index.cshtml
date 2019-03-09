@@ -1,4 +1,9 @@
-﻿<div id="rev-slider1" class="rev_slider fullwidthabanner">
+﻿@model MvcStore.Web.ViewModels.HomeViewModels
+
+@{ 
+    var fristcat = Model.Categories.First();
+}
+<div id="rev-slider1" class="rev_slider fullwidthabanner">
     <ul>
         <!-- Slide 1 -->
         <li data-transition="random">
@@ -174,6 +179,9 @@
 </div>
 @Html.Partial("_ProductPartial");
 <!-- END SLIDER -->
+
+
+
 <!-- PRODUCT NEW -->
 <section class="flat-row row-product-new">
     <div class="container">
