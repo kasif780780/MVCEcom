@@ -49,8 +49,15 @@ namespace MvcStore.Web.Controllers
 
         [HttpPost]
         public ActionResult Edit(Product product)
-        {
+        { 
             productsService.UpdateProduct(product);
+            return RedirectToAction("ProdcutTable");
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int ID)
+        {
+            productsService.DeleteProduct(ID);
             return RedirectToAction("ProdcutTable");
         }
     }

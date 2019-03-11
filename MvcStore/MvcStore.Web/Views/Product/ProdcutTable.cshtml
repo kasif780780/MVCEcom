@@ -36,8 +36,8 @@
                         @product.Price
                     </td>
                     <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <button class="editBtn" data-id="@product.ID">Edit</button>
+                        <button class="deleteBtn" data-id="@product.ID">Delete</button>
                     </td>
                 </tr>
             }
@@ -88,5 +88,61 @@
             .fail(function (XMLHttpRequest, textStatus, errorThrown) {
                 alert("Fails");
             });
+    });
+
+    //Edit Button Selector
+    $(".editBtn").click(function () {
+
+
+
+
+        $.ajax({
+            url: '/Product/Edit',
+            data: {
+                ID: $(this).attr('data-id')
+            }
+
+        })
+
+            .done(function (response) {
+                $("#actionCont").html(response);
+            })
+
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Fails");
+            });
+    });
+
+    //Delete Button Selector
+
+    
+    $(".deleteBtn").click(function () {
+
+        var confirmDelete = confirm("Are You Sure Want To Delete ?");
+        if (confirmDelete)
+        {
+
+
+            $.ajax({
+                type: 'POST',
+                url: '/Product/Delete',
+                data: {
+                    ID: $(this).attr('data-id')
+                }
+
+            })
+
+                .done(function (response) {
+                    $("#tableCont").html(response);
+                })
+
+                .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Fails");
+                });
+
+        }
+
+
+       
     });
 </script>
