@@ -1,0 +1,92 @@
+﻿@model List<Product>
+@{
+    ViewBag.Title = "ProdcutTable";
+
+}
+
+<h2>ProdcutTable</h2>
+<div>
+    <form method="post" action="/Product/ProdcutTable">
+        <input name="Search" id="searchText" >
+        <button id="searchBtn" type="button">Search</button>
+    </form>
+    <button type="button" id="newBtn">New</button>
+
+</div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <td>Product Name </td>
+                <td>Category </td>
+                <td>Price</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>
+                        @product.Name
+                    </td>
+                    <td>
+                        @product.Price
+                    </td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+<script>
+
+    $("#searchBtn").click(function () {
+        var serachValue = $("#searchText").val();
+        
+    
+
+        $.ajax({
+            url: '/Product/ProdcutTable',
+            data: {
+                search:serachValue
+            }
+    })
+
+            .done(function (response) {
+                $("#tableCont").html(response);
+        })
+
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Fails");
+            });
+    });
+
+
+    //New Button Selector
+    $("#newBtn").click(function () {
+        
+
+
+
+        $.ajax({
+            url: '/Product/Create',
+           
+        })
+
+            .done(function (response) {
+                $("#actionCont").html(response);
+            })
+
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Fails");
+            });
+    });
+</script>

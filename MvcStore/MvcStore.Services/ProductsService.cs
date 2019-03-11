@@ -8,49 +8,49 @@ using System.Threading.Tasks;
 
 namespace MvcStore.Services
 {
-    public class CategoriesService
+    public class ProductsService
     {
         //Get Single Categor From Database
-        public Category GetCategory(int ID)
+        public Product GetProduct(int ID)
         {
             using (var context = new CBContext())
             {
-                return context.Categories.Find(ID);
+                return context.Products.Find(ID);
             }
         }
         //Get Category From Database
-        public List<Category> GetCategories()
+        public List<Product> GetProducts()
         {
             using (var context = new CBContext())
             {
-                return context.Categories.ToList();
+                return context.Products.ToList();
             }
         }
         //Seve Category To Database
-        public void SaveCategory(Category category)
+        public void SaveProduct(Product product)
         {
             using (var context = new CBContext())
             {
-                context.Categories.Add(category);
+                context.Products.Add(product);
                 context.SaveChanges();
             }
         }
         //Update Data 
-        public void UpdateCategory(Category category)
+        public void UpdateProduct(Product product)
         {
             using (var context = new CBContext())
             {
-                context.Entry(category).State = System.Data.Entity.EntityState.Modified;
+                context.Entry(product).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
             }
         }
-        public void DeleteCategory(int ID)
+        public void DeleteProduct(int ID)
         {
             using (var context = new CBContext())
             {
-                var category = context.Categories.Find(ID);
+                var product = context.Products.Find(ID);
                 //context.Entry(category).State = System.Data.Entity.EntityState.Modified;
-                context.Categories.Remove(category);
+                context.Products.Remove(product);
                 context.SaveChanges();
             }
         }

@@ -7,13 +7,13 @@ namespace MvcStore.Database.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addImageURL : IMigrationMetadata
+    public sealed partial class category : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addImageURL));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(category));
         
         string IMigrationMetadata.Id
         {
-            get { return "201903091506190_addImageURL"; }
+            get { return "201903111125497_category"; }
         }
         
         string IMigrationMetadata.Source

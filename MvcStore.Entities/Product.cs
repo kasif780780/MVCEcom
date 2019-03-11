@@ -10,7 +10,7 @@ namespace MvcStore.Entities
     {
         public decimal Price { get; set; }
         public Category Category { get; set; } //Its Shows Category Have a Product
-        
-        
+
+
     }
 }

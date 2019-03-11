@@ -1,0 +1,16 @@
+﻿@model MvcStore.Entities.Category
+@{
+    ViewBag.Title = "Delete";
+}
+<h2>Delete Category</h2>
+<h1>Are You Want Delete Category</h1>
+<form method="post">
+    <input name="ID" type="hidden" value="@Model.ID" />
+    <label>Name</label>
+    <input name="Name" value="@Model.Name" />
+    <br />
+    <label>Description</label>
+    <input name="Description" value=" @Model.Description" />
+    <br />
+    <button type="submit">Delete</button>
+</form>

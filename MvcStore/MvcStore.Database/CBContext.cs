@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MvcStore.Database
 {
-   public class CBContext:DbContext
+   public class CBContext:DbContext,IDisposable
 
 
     {

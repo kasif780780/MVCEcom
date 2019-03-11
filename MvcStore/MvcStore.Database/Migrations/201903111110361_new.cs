@@ -3,7 +3,7 @@ namespace MvcStore.Database.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class _new : DbMigration
     {
         public override void Up()
         {
@@ -12,6 +12,7 @@ namespace MvcStore.Database.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
+                        ImageURL = c.String(),
                         Name = c.String(),
                         Description = c.String(),
                     })

@@ -49,13 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CBContext.cs" />
-    <Compile Include="Migrations\201903041525254_initial.cs" />
-    <Compile Include="Migrations\201903041525254_initial.Designer.cs">
-      <DependentUpon>201903041525254_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201903111110361_new.cs" />
+    <Compile Include="Migrations\201903111110361_new.Designer.cs">
+      <DependentUpon>201903111110361_new.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903091506190_addImageURL.cs" />
-    <Compile Include="Migrations\201903091506190_addImageURL.Designer.cs">
-      <DependentUpon>201903091506190_addImageURL.cs</DependentUpon>
+    <Compile Include="Migrations\201903111125497_category.cs" />
+    <Compile Include="Migrations\201903111125497_category.Designer.cs">
+      <DependentUpon>201903111125497_category.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,11 +71,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903041525254_initial.resx">
-      <DependentUpon>201903041525254_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903111110361_new.resx">
+      <DependentUpon>201903111110361_new.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903091506190_addImageURL.resx">
-      <DependentUpon>201903091506190_addImageURL.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903111125497_category.resx">
+      <DependentUpon>201903111125497_category.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
