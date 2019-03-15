@@ -1,9 +1,13 @@
 ﻿@model MvcStore.Entities.Category
 @{
     ViewBag.Title = "Edit";
+    var chaecked = Model.isFeatured ? "checked" : string.Empty;
+    var falseChecked = !Model.isFeatured ? "checked" : string.Empty;
+
 }
 <h2>Edit</h2>
 <form method="post">
+    
     <input name="ID" type="hidden" value="@Model.ID" />
     <label>Name</label>
     <input name="Name" value="@Model.Name" />
@@ -11,5 +15,10 @@
     <label>Description</label>
     <input name="Description" value=" @Model.Description" />
     <br />
+    <input name="isFeatured" type="radio" value="true" @chaecked />True
+    <input name="isFeatured" type="radio" value="false" @falseChecked />False
+    <button type="submit">Save</button>
+
+    <button type="submit">Save</button>
     <button type="submit">Save</button>
 </form>

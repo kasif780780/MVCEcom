@@ -14,7 +14,7 @@ namespace MvcStore.Web.Controllers
         public ActionResult Index()
         {
             HomeViewModels model = new HomeViewModels();
-             model.Categories = db.Categories.ToList();
+             model.FeaturedCategories = db.Categories.ToList();
             return View(model);
         }
 

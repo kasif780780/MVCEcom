@@ -26,6 +26,13 @@ namespace MvcStore.Services
                 return context.Categories.ToList();
             }
         }
+        public List<Category> FeaturedCategories()
+        {
+            using (var context = new CBContext())
+            {
+                return context.Categories.Where(x=>x.isFeatured==true&& x.ImageURL!=null).ToList();
+            }
+        }
         //Seve Category To Database
         public void SaveCategory(Category category)
         {

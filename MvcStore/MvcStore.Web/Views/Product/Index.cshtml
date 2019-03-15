@@ -3,14 +3,19 @@
     ViewBag.Title = "Index";
 
 }
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="tableCont">
+                    @{
+                        Html.RenderAction("ProdcutTable");
+                        //Html.RenderAction("Create");
+                    }
+                </div>
+                <hr />
+                <div id="actionCont">
 
-<h2>Index</h2>
-<div id="tableCont">
-    @{
-        Html.RenderAction("ProdcutTable");
-        //Html.RenderAction("Create");
-    }
-    </div>
-<div id="actionCont">
-
-</div>
+                </div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->

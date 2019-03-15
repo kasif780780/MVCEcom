@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace MvcStore.Services
 {
@@ -21,16 +22,20 @@ namespace MvcStore.Services
         //Get Category From Database
         public List<Product> GetProducts()
         {
+            //var context = new CBContext();
+            //    return context.Products.ToList();
             using (var context = new CBContext())
             {
-                return context.Products.ToList();
+                return context.Products.Include(x=>x.Category).ToList();
             }
         }
         //Seve Category To Database
         public void SaveProduct(Product product)
         {
+           
             using (var context = new CBContext())
             {
+                context.Entry(product.Category).State = System.Data.Entity.EntityState.Unchanged;
                 context.Products.Add(product);
                 context.SaveChanges();
             }

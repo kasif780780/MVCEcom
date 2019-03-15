@@ -1,5 +1,6 @@
 ﻿using MvcStore.Entities;
 using MvcStore.Services;
+using MvcStore.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,13 +31,21 @@ namespace MvcStore.Web.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return PartialView();
+            CategoriesService categoriesService = new CategoriesService();
+            var categories = categoriesService.GetCategories();
+            return PartialView(categories);
         }
 
         [HttpPost]
-        public ActionResult Create(Product product)
+        public ActionResult Create(NewCategoryViewModels model)
         {
-            productsService.SaveProduct(product);
+            CategoriesService categoriesService = new CategoriesService();
+            var newProduct = new Product();
+            newProduct.Name = model.Name;
+            newProduct.Description = model.Description;
+            newProduct.Price = model.Price;
+            newProduct.Category = categoriesService.GetCategory(model.CategoryID);
+           productsService.SaveProduct(newProduct);
             return RedirectToAction("ProdcutTable");
         }
 

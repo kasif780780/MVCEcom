@@ -9,7 +9,7 @@ namespace MvcStore.Entities
    public class Product: BaseEntity
     {
         public decimal Price { get; set; }
-        public Category Category { get; set; } //Its Shows Category Have a Product
+        public virtual Category Category { get; set; } //Its Shows Category Have a Product
 
 
     }

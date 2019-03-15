@@ -13,6 +13,8 @@ namespace MvcStore.Entities
 
         public List<Product> Products { get; set; } //Its Show Category Have Multiple Product
 
+        public bool isFeatured { get; set; }
+
        
     }
 }

@@ -1,7 +1,7 @@
 ﻿@model MvcStore.Web.ViewModels.HomeViewModels
 
 @{ 
-    var fristcat = Model.Categories.Where(category=>category.ImageURL!=null).First();
+    var fristcat = Model.FeaturedCategories.Where(category=>category.ImageURL!=null).First();
 }
 <div id="rev-slider1" class="rev_slider fullwidthabanner">
     <ul>

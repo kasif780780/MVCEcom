@@ -5,44 +5,61 @@
 }
 
 <h2>ProdcutTable</h2>
-<div>
-    <form method="post" action="/Product/ProdcutTable">
-        <input name="Search" id="searchText" >
-        <button id="searchBtn" type="button">Search</button>
-    </form>
-    <button type="button" id="newBtn">New</button>
 
-</div>
+        <div>
+            <form method="post" action="/Product/ProdcutTable">
+                <div class="row">
+                    <div class="col-md-9">  <input name="Search" class="form-control" id="searchText"></div>
+                    <div class="col-md-3"><button id="searchBtn" type="button">Search</button></div>
+                </div>
+              
+                
+            </form>
+            <button type="button" id="newBtn">New</button>
+
+        </div>
 
 
-    <table>
-        <thead>
-            <tr>
-                <td>Product Name </td>
-                <td>Category </td>
-                <td>Price</td>
-                <td>Action</td>
-            </tr>
-        </thead>
-
-        <tbody>
-            @foreach (var product in Model)
-            {
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>
-                        @product.Name
-                    </td>
-                    <td>
-                        @product.Price
-                    </td>
-                    <td>
-                        <button class="editBtn" data-id="@product.ID">Edit</button>
-                        <button class="deleteBtn" data-id="@product.ID">Delete</button>
-                    </td>
+                    <td>Product Name </td>
+                    <td>Category </td>
+                    <td>Price</td>
+                    <td>Action</td>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>
+                            @product.Name
+                        </td>
+                        <td>
+                            @if (product.Category != null)
+                            {
+                                <text>@product.Category.Name</text>
+                            }
+                            else
+                            {
+                                <text>-</text>
+                            }
+                        </td>
+                        <td>
+                            @product.Price
+                        </td>
+                        <td>
+                            <button class="editBtn" data-id="@product.ID">Edit</button>
+                            <button class="deleteBtn" data-id="@product.ID">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    
 
 
 
